@@ -1,6 +1,6 @@
 # Python to JSON Library
 
-I wrote this library as a proof-of-concept project. There are other libraries that accomplish basically the same tasks. Yet in spite of this, I still wanted to develop my own approach to dictionary conversion. 
+I wrote this library as a proof-of-concept project. There are other libraries that accomplish basically the same tasks. Yet in spite of this, I still wanted to develop my own approach to Python to JSON conversion. 
 
 Not only did I finish what I set out to do, but my code is actually quite a bit faster than I expected it to be.
 
