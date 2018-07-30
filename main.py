@@ -1,5 +1,4 @@
 # Made required imports
-import json
 import types
 
 
@@ -27,3 +26,7 @@ class Convert:
     # Returns string back with quotation marks.
     def StringSyntax(self, string):
         return '"' + str(string) + '"'
+
+    # Adds string values to the JSON string variable.
+    def AddStr(self, givenstring):
+        self.var = self.var + self.StringSyntax(givenstring)
