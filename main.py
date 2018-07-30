@@ -54,3 +54,29 @@ class Convert:
                 self.var = self.var + "}"
             else:
                 self.var = self.var + ","
+
+    # This method function handles dictionaries.
+    def Dictionary(self, x, name=0):
+        if name != 0:
+            self.AddName(name)
+        self.var = self.var + "{"
+        length = len(x)
+        index = 0
+        for i in x.keys():
+            if varType(x[i]) == "string":
+                self.AddName(str(i))
+                self.AddStr(x[i])
+            if varType(x[i]) == "number":
+                self.AddName(str(i))
+                self.AddNum(x[i])
+            if varType(x[i]) == "list":
+                self.AddName(str(i))
+                self.List(x[i])
+            if varType(x[i]) == "dictionary":
+                self.AddName(str(i))
+                self.Dictionary(x[i], name=str(i))
+            index = index + 1
+            if index == length:
+                self.var = self.var + "}"
+            else:
+                self.var = self.var + ","
