@@ -80,3 +80,13 @@ class Convert:
                 self.var = self.var + "}"
             else:
                 self.var = self.var + ","
+
+    # Use this method to start converting dictionaries into JSON.
+    def Begin(self, x, name=0):
+        # The name argument isn't required.
+        if name != 0:
+            self.Dictionary(x, name)
+            return self.var
+        else:
+            self.Dictionary(x)
+            return self.var
