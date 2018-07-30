@@ -19,3 +19,7 @@ class Convert:
     def __init__(self):
         # This is the most important variable. It stores the JSON string.
         self.var = ""
+
+    # This method function is basically the same as AddString, except it doesn't add quotation marks.
+    def AddNum(self, givennumber):
+        self.var = self.var + str(givennumber)
