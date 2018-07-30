@@ -34,3 +34,23 @@ class Convert:
     # This method takes a name argument and adds it as the name to the JSON string (self.var).
     def AddName(self, name):
         self.var = self.var + self.StringSyntax(name) + ":"
+
+     # This function handles lists.  
+    def List(self, givenlist):
+        length = len(givenlist)
+        index = 0
+        self.var = self.var + "{"
+        for i in givenlist:
+            if varType(i) == "string":
+                self.AddStr(i)
+            if varType(i) == "number":
+                self.AddNum(i)
+            if varType(i) == "list":
+                self.List(i)
+            if varType(i) == "dictionary":
+                self.Dictionary(i)
+            index = index + 1
+            if index == length:
+                self.var = self.var + "}"
+            else:
+                self.var = self.var + ","
