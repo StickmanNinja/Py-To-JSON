@@ -30,3 +30,7 @@ class Convert:
     # Adds string values to the JSON string variable.
     def AddStr(self, givenstring):
         self.var = self.var + self.StringSyntax(givenstring)
+
+    # This method takes a name argument and adds it as the name to the JSON string (self.var).
+    def AddName(self, name):
+        self.var = self.var + self.StringSyntax(name) + ":"
