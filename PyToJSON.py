@@ -39,7 +39,7 @@ class Convert:
     def List(self, givenlist):
         length = len(givenlist)
         index = 0
-        self.var = self.var + "{"
+        self.var = self.var + "["
         for i in givenlist:
             if varType(i) == "string":
                 self.AddStr(i)
@@ -51,7 +51,7 @@ class Convert:
                 self.Dictionary(i)
             index = index + 1
             if index == length:
-                self.var = self.var + "}"
+                self.var = self.var + "]"
             else:
                 self.var = self.var + ","
 
